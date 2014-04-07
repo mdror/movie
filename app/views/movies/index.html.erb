@@ -2,10 +2,11 @@
 <p><%= notice %></p>
 <h3><%= link_to "+ Add New Movie", new_movie_path %></h3>
 
-<%= form_tag "/", method: "GET" do %>
+<%= form_tag search_path, method: :get do %>
     <%= text_field_tag :q, nil %>
     <%= submit_tag "Search" %>
 <% end %>
+
 <%= render 'list' %>
 
 
