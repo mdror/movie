@@ -36,11 +36,18 @@ class MoviesController < ApplicationController
       if @movie.update(safe_movie)
       redirect_to @movie
       else
-      render 'edit'
+      render 'edit' 
       end
+      
+
     end
 
-    
+    def destroy
+    @movie = Movie.find(params[:id])
+    @movie.destroy
+ 
+    redirect_to index_path
+end
       
   
 

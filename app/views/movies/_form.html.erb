@@ -24,8 +24,17 @@
         </div>
     </fieldset>
 
+<%= button_to 'Destroy', edit_movie_path(@movie),
+                    method: :delete, data: { confirm: 'Are you sure?' } %>
+
 <%= f.submit %>
 
-
-
 <% end %>
+
+
+
+
+
+
+
+
